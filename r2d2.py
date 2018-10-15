@@ -10,6 +10,10 @@ import ctypes
 from pygatt.backends import BLEBackend, Characteristic, BLEAddressType
 
 command = None
+r2_address = 'C1:F0:DE:DC:2F:95'
+q5_address = 'DB:01:0F:08:8D:B2'
+bb8_address = 'EB:3B:5C:E6:43:46'
+
 address = 'C1:F0:DE:DC:2F:95'
 sendbytes = None
 debuglogging = False
