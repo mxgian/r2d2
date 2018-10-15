@@ -62,7 +62,17 @@ def BuildPacket(bytes):
         ret.append(0xD8)
         return ret
 robot = sys.argv[1]
+
 print (robot)
+if robot = "r2d2":
+    address = r2_address
+elif robot = "q5":
+    address = q5_address
+elif robot = "bb8":
+    address = bb8_address
+else:
+    address = r2_address
+
 
 try:
         opts, args = getopt.getopt(sys.argv[2:], "a:c:dn", ["address=", "command=", "debug", "nosleep"])
