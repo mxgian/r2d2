@@ -64,11 +64,11 @@ def BuildPacket(bytes):
 robot = sys.argv[1]
 
 print (robot)
-if robot = "r2d2":
+if robot == "r2d2":
     address = r2_address
-elif robot = "q5":
+elif robot == "q5":
     address = q5_address
-elif robot = "bb8":
+elif robot == "bb8":
     address = bb8_address
 else:
     address = r2_address
