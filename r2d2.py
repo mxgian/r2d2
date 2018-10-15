@@ -61,7 +61,7 @@ def BuildPacket(bytes):
         # 0xD8 marks the end of a packet
         ret.append(0xD8)
         return ret
-try: robot = sysargv[1]
+robot = sysargv[1]
 print (robot)
 
 try:
