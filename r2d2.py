@@ -63,7 +63,7 @@ def BuildPacket(bytes):
         return ret
 
 try:
-        opts, args = getopt.getopt(sys.argv[1:], "a:c:dn", ["address=", "command=", "debug", "nosleep"])
+        opts, args = getopt.getopt(sys.argv[2:], "a:c:dn", ["address=", "command=", "debug", "nosleep"])
 except getopt.GetoptError as err:
         print(err)
         sys.exit(1)
