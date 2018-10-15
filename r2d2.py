@@ -61,6 +61,8 @@ def BuildPacket(bytes):
         # 0xD8 marks the end of a packet
         ret.append(0xD8)
         return ret
+try robot = sysargv[1]
+print (robot)
 
 try:
         opts, args = getopt.getopt(sys.argv[2:], "a:c:dn", ["address=", "command=", "debug", "nosleep"])
