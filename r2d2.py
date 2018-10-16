@@ -123,8 +123,8 @@ device.char_write_handle(0x1c, [0x8D,0x0A,0x13,0x0D,0x00,0xD5,0xD8], True)
 # Turn on holoprojector led, 0xff (max) intensity
 device.char_write_handle(0x1c, [0x8D,0x0A,0x1A,0x0E,0x1C,0x00,0x80,0xFF,0x32,0xD8], True)
 
-print("waiting 5 secs before sending command")
-time.sleep(5)
+print("waiting 2 secs before sending command")
+time.sleep(2)
 
 for seq in sequences:
         #device.char_write_handle(0x1c, commandmap[command], True)
