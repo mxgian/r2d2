@@ -63,7 +63,7 @@ def BuildPacket(bytes):
         return ret
 robot = sys.argv[1]
 
-print (robot)
+#print (robot)
 if robot == "r2d2":
     address = r2_address
 elif robot == "q5":

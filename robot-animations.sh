@@ -10,6 +10,6 @@ for i in "${arr[@]}"
 do 
 echo "$i"
  /home/pi/r2d2/r2d2.py $1 -c $i
- echo "sleep for 2 secs"
+# echo "sleep for 2 secs"
  sleep 2
 done
