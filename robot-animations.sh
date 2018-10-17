@@ -8,5 +8,8 @@ declare -a arr=("scared" "no" "bipod" "angry" "confident" "tripod" "sad" "alarm"
 robot = $1
 for i in "${arr[@]}"
 do 
+echo "$i"
  /home/pi/r2d2/r2d2.py robot -c $i
+ echo "sleep for 2 secs"
+ sleep 2
 done
