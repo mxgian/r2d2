@@ -108,23 +108,23 @@ if debuglogging == True:
 
 adapter = pygatt.GATTToolBackend()
 
-print("init up droid")
+#print("init up droid")
 adapter.start()
 device = adapter.connect(address=address, address_type=BLEAddressType.random)
 
-print("connect up droid")
+#print("connect up droid")
 # 'usetheforce...band' tells the droid we're a controller, I guess.  Prevents disconnection.
 device.char_write_handle(0x15, [0x75,0x73,0x65,0x74,0x68,0x65,0x66,0x6F,0x72,0x63,0x65,0x2E,0x2E,0x2E,0x62,0x61,0x6E,0x64], True)
 
-print("wake up droid")
+#print("wake up droid")
 # wake from sleep?  Droid is responsive and front led flashes blue/red
 device.char_write_handle(0x1c, [0x8D,0x0A,0x13,0x0D,0x00,0xD5,0xD8], True)
 
 # Turn on holoprojector led, 0xff (max) intensity
 device.char_write_handle(0x1c, [0x8D,0x0A,0x1A,0x0E,0x1C,0x00,0x80,0xFF,0x32,0xD8], True)
 
-print("waiting 2 secs before sending command")
-time.sleep(2)
+#print("waiting 2 secs before sending command")
+#time.sleep(2)
 
 for seq in sequences:
         #device.char_write_handle(0x1c, commandmap[command], True)
