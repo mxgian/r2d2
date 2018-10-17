@@ -1,3 +1,10 @@
 DB:01:0F:08:8D:B2 Q5-8DB2
 EB:3B:5C:E6:43:46 BB-4346
 C1:F0:DE:DC:2F:95 D2-2F95
+
+sudo gatttool -I -t random -b C1:F0:DE:DC:2F:95
+
+connect
+char-write-req 15 757365746865666F7263652
+char-write-req 1c 8D0A130D00D5D8
+char-write-req 1c 8D0A1A0E1C0080FF32D8
