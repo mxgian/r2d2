@@ -15,11 +15,13 @@ if grep -q r2-abh.txt "$File"; then
    /home/pi/r2d2/dropbox_uploader.sh delete r2-abh.txt && /bin/rm /tmp/ifttt && echo "Time: $(date) got email" >> /tmp/L1.log && /home/pi/r2d2/r2d2.py r2d2 -c laugh
 fi
 
-declare -a arr = /home/pi/r2d2/dropbox_uploader.sh list / | awk '{ print $NF }'
-for i in "${arr[@]}"
+# this section cleans up the dir if there are files left over, for example if the monitor script crashes or mails come in too fast and we have multiple files (1,2,3), in this case dropbox adds n+1 file instead of creating the r2d2.txt and it won't trigger the script.  
+# this code would need to be cleaned up to handle multiple use cases
+/home/pi/r2d2/dropbox_uploader.sh list   | awk '{ print $NF }' | grep r2 > /tmp/checklist
+
+for i in $(cat /tmp/checklist);
 do 
-echo "$i"
-# /home/pi/r2d2/r2d2.py $1 -c $i
-# echo "sleep for 2 secs"
+echo "deleting $i"
+/home/pi/r2d2/dropbox_uploader.sh delete $i
 done
 
