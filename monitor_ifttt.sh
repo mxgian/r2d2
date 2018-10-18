@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Check your paths here
+# XX Check your paths here
 /home/pi/r2d2/dropbox_uploader.sh list  > /tmp/ifttt
 
 File="/tmp/ifttt"
