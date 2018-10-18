@@ -23,7 +23,7 @@ fi
 for i in "${XYZ[@]}"
 do 
 echo "deleting ${i}"
-#/home/pi/r2d2/dropbox_uploader.sh delete $i
+/home/pi/r2d2/dropbox_uploader.sh delete "$i"
 done
 
 #/home/pi/r2d2/dropbox_uploader.sh list   | awk '{ print $NF }' | grep r2 > /tmp/checklist
