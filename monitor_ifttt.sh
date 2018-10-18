@@ -11,6 +11,10 @@ if grep -q r2d2.txt "$File"; then
 fi
 
 #clean
+if grep -q r2-abh.txt "$File"; then
+   /home/pi/r2d2/dropbox_uploader.sh delete r2-abh.txt && /bin/rm /tmp/ifttt && echo "Time: $(date) got email" >> 
+/tmp/L1.log && /home/pi/r2d2/r2d2.py r2d2 -c laugh
+fi
 
 declare -a arr = /home/pi/r2d2/dropbox_uploader.sh list / | awk '{ print $NF }'
 for i in "${arr[@]}"
