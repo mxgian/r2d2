@@ -9,3 +9,13 @@ echo "checking for file"
 if grep -q r2d2.txt "$File"; then
    /home/pi/r2d2/dropbox_uploader.sh delete r2d2.txt && /bin/rm /tmp/ifttt && echo "Time: $(date) got email" >> /tmp/L1.log && /home/pi/r2d2/r2d2.py r2d2 -c happy
 fi
+
+#clean
+
+declare -a arr = /home/pi/r2d2/dropbox_uploader.sh list / | awk '{ print $NF }'
+for i in "${arr[@]}"
+do 
+echo "$i"
+# /home/pi/r2d2/r2d2.py $1 -c $i
+# echo "sleep for 2 secs"
+done
