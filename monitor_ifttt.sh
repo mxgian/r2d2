@@ -7,7 +7,7 @@ File="/tmp/ifttt"
 
 # do some checks, if we ran an alert in the last 5 mins, do not run the alert
 lastrun="/tmp/checkstamp"
-rightnow=/bin/date +%s
+rightnow="$(/bin/date +%s)"
 echo "lastostamp ${lastrun} , ${rightnow}"
 # Monitor to turn L1 on - check your paths here
 if grep -q r2d2.txt "$File"; then
