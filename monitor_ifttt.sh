@@ -13,7 +13,7 @@ makenoise="0"
 timediff=$(expr $rightnow - $lastrun)
 if [ "$timediff" > 300 ]; then
 	makenoise="1"
-	echo "less than 5 mins since last time, be quiet"
+	echo "more than 5 mins since last time"
 fi
 
 if [ "$makenoise" = "1" ]; then
