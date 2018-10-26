@@ -11,12 +11,12 @@ rightnow="$(/bin/date +%s)"
 #echo "lastostamp ${lastrun} , ${rightnow}"
 makenoise="1"
 timediff=$(expr $rightnow - $lastrun)
-if $timediff > 300; then
+if "$timediff" > 300; then
 	makenoise="0"
 	echo "less than 5 mins since last time, be quiet"
 fi
 
-if [$makenoise = "1"]; then
+if ["$makenoise" = "1"]; then
 
 if grep -q r2d2.txt "$File"; then
    /home/pi/r2d2/dropbox_uploader.sh delete r2d2.txt  && echo "Time: $(date) got email" >> /tmp/L1.log && /home/pi/r2d2/r2d2.py r2d2 -c happy
