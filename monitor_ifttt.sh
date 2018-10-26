@@ -9,10 +9,10 @@ File="/tmp/ifttt"
 lastrun="$(cat /tmp/checkstamp)"
 rightnow="$(/bin/date +%s)"
 #echo "lastostamp ${lastrun} , ${rightnow}"
-makenoise="0"
-timediff=expr $rightnow - $lastrun
+makenoise="1"
+timediff=$(expr $rightnow - $lastrun)
 if $timediff > 300; then
-	makenoise="1"
+	makenoise="0"
 	echo "less than 5 mins since last time, be quiet"
 fi
 
