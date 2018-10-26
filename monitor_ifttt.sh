@@ -16,7 +16,7 @@ if $timediff > 300; then
 	echo "less than 5 mins since last time, be quiet"
 fi
 
-if $makenoise = "1"; then
+if [$makenoise = "1"]; then
 
 if grep -q r2d2.txt "$File"; then
    /home/pi/r2d2/dropbox_uploader.sh delete r2d2.txt  && echo "Time: $(date) got email" >> /tmp/L1.log && /home/pi/r2d2/r2d2.py r2d2 -c happy
