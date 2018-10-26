@@ -10,7 +10,7 @@ lastrun="$(cat /tmp/checkstamp)"
 rightnow="$(/bin/date +%s)"
 #echo "lastostamp ${lastrun} , ${rightnow}"
 makenoise="0"
-timediff=$rightnow-$lastrun
+timediff=expr $rightnow - $lastrun
 if $timediff > 300; then
 	makenoise="1"
 	echo "less than 5 mins since last time, be quiet"
