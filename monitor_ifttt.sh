@@ -45,7 +45,7 @@ done
 #do 
 #echo "deleting $i"
 #/home/pi/r2d2/dropbox_uploader.sh delete $i
-#done
+#donex
 /bin/rm /tmp/ifttt
 /bin/rm /tmp/checklist
 /bin/date +%s > /tmp/checkstamp
